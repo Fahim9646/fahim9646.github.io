@@ -1,0 +1,82 @@
+- title: General Information
+  type: map
+  contents:
+    - name: Full Name
+      value: Md. Abdullah Al-Fahim
+    - name: Email
+      value: fahim.civilworks@gmail.com
+    - name: Current Position
+      value: Executive, Quality Control (on-site), Rancon Engineering & Consultants Ltd., Bangladesh
+
+- title: Education
+  type: time_table
+  contents:
+    - title: BSc in Civil Engineering
+      institution: Rajshahi University of Engineering and Technology (RUET), Bangladesh
+      year: 2019–24
+      description:
+        - "CGPA: 3.06/4.00"
+
+- title: Professional Experience
+  type: time_table
+  contents:
+    - title: Executive, Quality Control (on-site)
+      institution: Rancon Engineering & Consultants Ltd., Bangladesh
+      year: 2025–now
+      description:
+        - "Since 09 Nov 2025, working with the Project Management Office (PMO)."
+        - On-site construction quality control and inspection follow-up.
+        - Project scheduling, document management and PMO-level reporting.
+    - title: Planning Engineer, Civil Engineering Department
+      institution: Mir Cement Ltd. (Narayanganj Factory), Bangladesh
+      year: 2025
+      description:
+        - "Jan 2025 – Nov 2025."
+        - Developed and monitored project schedules; coordinated procurement and construction teams.
+        - Prepared cost estimates, budgets and resource allocation; tracked progress and proposed corrective measures.
+        - Carried out daily quality inspections and worked on concrete mix design and optimisation.
+
+- title: Research Experience
+  type: time_table
+  contents:
+    - title: Bedding-Plane Anisotropy at Sand and Sand-Concrete Interfaces
+      institution: Department of Civil Engineering, RUET (with Md. Mahmud Sazzad)
+      year: 2026
+      description:
+        - Ran 48 direct shear tests on a river sand and a crushed sand, sheared against themselves and against concrete, at four bedding angles and three normal stresses.
+        - Built a two-dimensional DEM model (clumped grains, rolling-resistance contacts) and a calibrate-once-then-freeze protocol with blind predictions at other bedding angles.
+    - title: Barriers to Green Buildings in Bangladesh
+      institution: Department of Civil Engineering, RUET (with Sifat Shahriar)
+      year: 2024
+      description:
+        - Designed and distributed a questionnaire (160 sent, 87 responses) and ranked seven barrier criteria with the Analytic Hierarchy Process (consistency ratio 0.011).
+
+- title: Publications
+  type: time_table
+  contents:
+    - title: Published, Conference Paper
+      year: 2024
+      description:
+        - "Al-Fahim, M. A., & Shahriar, S. (2024, February 7–9). Hindrances in constructing green buildings in Bangladesh: A comprehensive study. <em>Proceedings of the 7th International Conference on Civil Engineering for Sustainable Development (ICCESD 2024)</em> (Paper ID: 710). KUET, Khulna, Bangladesh."
+    - title: In Preparation
+      year: 2026
+      description:
+        - "Al-Fahim, M. A., Sazzad, M. M., & Shafi, M. S. M. (2026). Transmission and attenuation of bedding-plane anisotropy from sand to sand-concrete interfaces: A discrete element study. [In preparation]"
+
+- title: Technical Skills
+  type: nested_list
+  contents:
+    - title: Research & Modelling
+      items:
+        - Discrete element method (2D, clumped grains)
+        - Direct shear testing (ASTM D3080)
+        - Analytic Hierarchy Process
+    - title: Programming
+      items:
+        - Python
+        - R
+    - title: Planning & Quality Control
+      items:
+        - Microsoft Project
+        - Excel (VBA, Power Query)
+        - Concrete mix design

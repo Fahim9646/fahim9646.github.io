@@ -1,0 +1,9 @@
+{% assign cv_path = '/assets/pdf/CV_Md_Abdullah_Al-Fahim.pdf' %}
+{% assign cv_found = false %}
+{% for f in site.static_files %}{% if f.path == cv_path %}{% assign cv_found = true %}{% endif %}{% endfor %}
+{% if cv_found %}
+<section id="cv" class="post mt-5 pt-4" style="border-top: 1px solid var(--global-divider-color);">
+  <h2 style="margin-bottom: 1rem;">cv</h2>
+  {% include cv_embed.liquid %}
+</section>
+{% endif %}

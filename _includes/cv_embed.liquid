@@ -1,0 +1,27 @@
+{% comment %}
+  Embedded CV. Put the PDF at assets/pdf/CV_Md_Abdullah_Al-Fahim.pdf .
+  Nothing is shown until that file exists, so the site never has a broken viewer.
+{% endcomment %}
+{% assign cv_path = '/assets/pdf/CV_Md_Abdullah_Al-Fahim.pdf' %}
+{% assign cv_found = false %}
+{% for f in site.static_files %}{% if f.path == cv_path %}{% assign cv_found = true %}{% endif %}{% endfor %}
+{% if cv_found %}
+<p style="margin-bottom: 1rem;">
+  <a href="{{ cv_path | relative_url }}" target="_blank" rel="noopener noreferrer" style="font-size: 0.95rem;">
+    <i class="fa-solid fa-file-pdf" style="margin-right: 0.4em;"></i> Download / Open in new tab
+  </a>
+</p>
+<iframe
+  src="{{ cv_path | relative_url }}"
+  width="100%"
+  height="850px"
+  style="border: 1px solid var(--global-divider-color); border-radius: 4px;"
+  title="CV - Md. Abdullah Al-Fahim"
+>
+  <p>Your browser does not support embedded PDFs.
+    <a href="{{ cv_path | relative_url }}" target="_blank">Download the CV here.</a>
+  </p>
+</iframe>
+{% else %}
+  {% if include.show_empty %}<p>CV coming soon.</p>{% endif %}
+{% endif %}

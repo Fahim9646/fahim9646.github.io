@@ -1,0 +1,92 @@
+<section id="research" class="post mt-5 pt-4" style="border-top: 1px solid var(--global-divider-color);">
+  <h2>research</h2>
+
+  <!-- Green buildings (published) — text LEFT, diagrams RIGHT -->
+  <div style="margin-bottom: 2.4rem;">
+    <div class="research-flex-row" style="display: flex; gap: 1.8rem; align-items: flex-start;">
+      <div style="flex: 1; min-width: 0;">
+        <h4 class="research-paper-title">Hindrances in Constructing Green Buildings in Bangladesh: A Comprehensive Study</h4>
+        <p style="margin: -0.3rem 0 0.7rem;">
+          <span style="font-size: 0.85rem; color: var(--global-text-color-light);">7th International Conference on Civil Engineering for Sustainable Development (ICCESD 2024), KUET, Khulna &middot; with Sifat Shahriar</span>
+        </p>
+        <p>
+          <strong>Why it matters.</strong> The construction sector uses up to 40% of global energy, and buildings account for roughly 32% of energy use in Bangladesh.
+          Green buildings are a response, yet the country has no specific guideline for them and developers mostly seek foreign (LEED) certification.
+          This paper asks which barriers matter most.
+        </p>
+        <p>
+          <strong>Method.</strong> A 10-question survey (Google Forms) was sent to 160 experts and members of the public; <strong>87 responses</strong> came back.
+          The answers were grouped into <strong>seven criteria</strong> and ranked with the <strong>Analytic Hierarchy Process (AHP)</strong>, using pairwise comparisons on a 1&ndash;9 scale
+          in AHP-OS. The comparison was consistent (&lambda;<sub>max</sub> = 7.087, consistency ratio = 0.011, well under the 0.10 limit).
+        </p>
+        <p>
+          <strong>Findings.</strong> Lack of <strong>government involvement</strong> ranked first (25.0%), followed by <strong>ownership of residence</strong> (23.8%, since many people rent)
+          and <strong>technical difficulties</strong> (18.7%, including scarce skilled manpower and materials). Willingness to convert and overall expense tied for fourth (10.4% each);
+          indifference (6.0%) and satisfaction with current bills (5.7%) mattered least.
+        </p>
+        <p>
+          <strong>Recommendations.</strong> New legislation for green practices in new construction, government certification for developers, yearly awareness programmes and loans for homeowners,
+          and green construction in vocational and engineering education.
+        </p>
+        <p style="font-size: 0.85rem; color: var(--global-text-color-light);">
+          <em>Published, conference paper 2024 &mdash; <a href="{{ '/assets/pdf/ICCESD2024-green-buildings-bangladesh.pdf' | relative_url }}" target="_blank">full paper (PDF)</a></em>
+        </p>
+      </div>
+      <div class="research-img-col" style="flex-shrink: 0; width: 340px;">
+        <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+          <img
+            src="{{ '/assets/img/research/green-building-ranking.png' | relative_url }}"
+            alt="Ranked AHP priority weights of seven hindrance criteria with minimum to maximum range"
+            class="img-fluid rounded z-depth-1" data-zoomable
+            style="width: 100%; height: auto; object-fit: contain; background: #fff;"
+          >
+          <img
+            src="{{ '/assets/img/research/green-building-ahp-tree.png' | relative_url }}"
+            alt="Sample AHP hierarchy: goal, criteria and alternatives"
+            class="img-fluid rounded z-depth-1" data-zoomable
+            style="width: 100%; height: auto; object-fit: contain; background: #fff;"
+          >
+        </div>
+        <p style="font-size: 0.7rem; color: var(--global-text-color-light); margin-top: 0.4rem; text-align: center;">
+          Top: AHP priority of each criterion (redrawn from Table 1 of the paper). Bottom: the AHP hierarchy used to structure the comparison (Fig. 1 of the paper).
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- DEM manuscript (in preparation) — abstract only -->
+  <div style="margin-bottom: 1.2rem;">
+    <h4 class="research-paper-title">Transmission and Attenuation of Bedding-Plane Anisotropy from Sand to Sand-Concrete Interfaces: A Discrete Element Study</h4>
+    <p style="margin: -0.3rem 0 0.7rem;">
+      <span style="font-size: 0.85rem; color: var(--global-text-color-light);">Md. Abdullah Al-Fahim, Md. Mahmud Sazzad (supervisor), M. S. M. Shafi &middot; Department of Civil Engineering, RUET</span>
+    </p>
+    <p style="text-align: justify;">
+      Aim: to test how the inherent (bedding-plane) anisotropy of sand is transmitted from bulk sand to a sand&ndash;concrete interface, using matched laboratory direct shear tests and a two-dimensional discrete element model.
+    </p>
+
+    <p style="font-size: 0.85rem; color: var(--global-text-color-light); margin-bottom: 0.2rem;"><strong>What I developed</strong></p>
+    <ul style="text-align: justify;">
+      <li>A custom two-dimensional DEM engine written from scratch in Python/PyTorch (float64), with GPU acceleration.</li>
+      <li>Grain generator for clumped particles: three-disk clumps for sub-rounded river sand and four-disk clumps for angular crushed sand, with sizes drawn from the sieve curve and each grain tilted to the target bedding angle with small random scatter.</li>
+      <li>A matched laboratory programme of 48 direct shear tests (ASTM D3080) on the two sands, sand&ndash;sand and sand&ndash;concrete, at four bedding angles and three normal stresses.</li>
+      <li>Post-processing for peak friction angle, stress&ndash;strain response and three fabric tensors (contact normals, force-weighted contact normals, grain long-axis orientation).</li>
+    </ul>
+
+    <p style="font-size: 0.85rem; color: var(--global-text-color-light); margin-bottom: 0.2rem;"><strong>What the code does</strong></p>
+    <ul style="text-align: justify;">
+      <li><strong>Contact model:</strong> at every grain&ndash;grain and grain&ndash;wall contact, a linear spring&ndash;dashpot acts in the normal direction (push-only, no tension), an elastic&ndash;perfectly plastic spring acts in the tangential direction (capped by Coulomb friction), and an elastic&ndash;perfectly plastic rolling-resistance spring resists relative grain rotation.</li>
+      <li><strong>Specimen preparation:</strong> grains are dropped under gravity and settled, then consolidated to the target normal stress by a rigid load plate whose height is adjusted each step from the measured plate force.</li>
+      <li><strong>Sand&ndash;sand shear:</strong> the specimen is split into a driven upper raft, a fixed base and a free band around the shear plane, so the shear zone develops from the contact laws alone.</li>
+      <li><strong>Sand&ndash;concrete interface:</strong> the concrete surface is modelled as a sawtooth wall scaled to grain size, with contact forces tilted to whichever tooth face a grain rests against; the sand block is then displaced over it in small drive-and-relax cycles.</li>
+      <li><strong>Calibrate-once protocol:</strong> friction and rolling-resistance parameters are tuned against experiment at a single bedding angle and then frozen, so every other bedding angle is a blind prediction; each condition is repeated with three random seeds.</li>
+      <li><strong>Specimen-size study:</strong> the same model is run at two specimen lengths to test whether the bedding-angle signal survives in direct shear.</li>
+    </ul>
+
+    <p style="font-size: 0.85rem; color: var(--global-text-color-light);">
+      <strong>Keywords:</strong> discrete element method; inherent anisotropy; bedding angle; sand-concrete interface; direct shear; interface roughness
+    </p>
+    <p style="font-size: 0.85rem; color: var(--global-text-color-light);">
+      <em>In preparation, 2026 &mdash; full text not yet available</em>
+    </p>
+  </div>
+</section>
