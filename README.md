@@ -25,7 +25,7 @@ It has four parts: **about**, **research**, **publications** and **cv**.
 
 - **Bio and headline:** `_pages/about.md`
 - **Research cards on the home page:** `_includes/sections/research.liquid` (images in `assets/img/research/`)
-- **Publications:** `_bibliography/papers.bib`. The page lists `@inproceedings` and `@article` entries under **published** and `@unpublished` entries under **in preparation**. When the DEM manuscript is accepted, change `@unpublished` to `@article`, add `journal`, `volume`, `pages`, `doi` and `html`, drop the `note`, and change `abbr`. Then update the status line and add figures to its card in `_includes/sections/research.liquid`.
+- **Publications:** `_bibliography/papers.bib`. The page lists `@inproceedings` and `@article` entries under **published**, `@misc` entries under **under review** and `@unpublished` entries under **in preparation**. When the DEM manuscript is accepted, change `@misc` to `@article`, add `journal`, `volume`, `pages`, `doi` and `html`, drop the `note`, and change `abbr`. Then update the status line and add figures to its card in `_includes/sections/research.liquid`.
 - **CV:** `_data/cv.yml`
 
 ## Preview locally (optional)

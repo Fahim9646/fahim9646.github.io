@@ -2,7 +2,7 @@
 layout: page
 permalink: /publications/
 title: publications
-description: Published work and work in preparation.
+description: Published work, work under review and work in preparation.
 nav: false
 nav_order: 2
 ---
@@ -16,6 +16,14 @@ nav_order: 2
 <div class="publications">
 
 {% bibliography --group_by none --query @inproceedings %}
+
+</div>
+
+### under review
+
+<div class="publications">
+
+{% bibliography --group_by none --query @misc %}
 
 </div>
 
